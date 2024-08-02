@@ -1,0 +1,93 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todo App</title>
+		<link rel="stylesheet" href="todo.css" />
+	</head>
+	<body>
+		<header>
+			<p class="text-3xl my-3 text-center">Welcome back, Your Todo App</p>
+		</header>
+		<main>
+			<dialog id="addNewTodoModal">
+				<button class="modal-close-button">X</button>
+				<div id="modalContent" class="padding">
+					<form id="addNewTodoForm">
+						<label for="todo-name" class="flex" style="flex-direction: column">
+							Todo Name
+							<input
+								required
+								class="padding"
+								type="text"
+								name=""
+								id="todo-name"
+							/>
+						</label>
+						<label for="todo-name" class="flex" style="flex-direction: column">
+							Todo Time
+							<input
+								required
+								class="padding"
+								type="datetime-local"
+								name=""
+								id="todo-time"
+							/>
+						</label>
+						<label for="todo-name" class="flex" style="flex-direction: column">
+							Current Time
+							<input
+								required
+								class="padding"
+								type="text"
+								name=""
+								id="current-time"
+								readonly
+							/>
+						</label>
+						<label for="todo-name" class="flex" style="flex-direction: column">
+							Todo Description
+							<textarea
+								required
+								name=""
+								id="todo-description"
+								cols="auto"
+								rows="5"
+							></textarea>
+						</label>
+						<div class="text-center" style="margin-top: 20px">
+							<button type="submit" class="padding">Add</button>
+						</div>
+					</form>
+				</div>
+			</dialog>
+			<section class="flex items-center gap" style="border-top: 2px solid;">
+				<div style="width: 30%; border-right: 2px solid" class="padding">
+					<h3 class="text-center mb-2">Todo List</h3>
+					<div class="text-center">
+						<button id="addNewTodo" class="text-center my-3">
+							Add a New Todo
+						</button>
+					</div>
+					<ul id="todoListContainer">
+
+                    </ul>
+				</div>
+				<div style="width: 60%">
+					<h3 style="margin-top: 10px">Todo Details</h3>
+
+					<div
+						class="padding"
+						style="width: 100%"
+						id="todoDetailContainer"
+					></div>
+				</div>
+			</section>
+		</main>
+
+		<script src="todo.js"></script>
+	</body>
+    </html>
